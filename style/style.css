@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+/* fonte do titulo da pg e do texto importada do google fonts*/
+
+/* root é para criar variaveis que facilitam o codigo em caso de alteração */
+:root{
+    --cor-primaria: #000000 ;
+    --cor-secundaria:#f6f6f6 ;
+    --cor-terciaria: #22d4fd ;
+    --cor-hoover: #272727 ;
+
+    --font-primaria: 'Krona One', sans-serif;
+    --font-secundaria: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0; /* margin e padding 0 sao para resetar o tamanho padrao do css */
+    padding: 0; /*padding é responsável por definir uma distância interna entre um elemento e sua borda*/
+}
+
+body {
+ /* height: 100vh; taag responsavel pela altura da tela e o vh é de viewport */
+ box-sizing: border-box; /* taag responsavel para nao deixar nada sair pra fora do body (elemento pai) */
+ background-color:var(--cor-primaria) ;/* taag responsavel pela cor de fundo */
+ color:var(--cor-secundaria) ; /* taag responsavel pela cor do texto*/
+}
+
+.cabecalho{
+/*padding é responsável por definir uma distância interna entre um elemento e sua borda*/
+/* foi utilizado 4 valores, o primeiro é para superior, segundo direito, terceiro inferior e quarto esquerda */
+    padding: 2% 0% 0% 15%;
+   
+}
+
+.cabecalho__menu{
+/* display felx é para tornar um flex container e
+partir daí podemos manipular todos os elementos filhos desse flex container com propriedades novas */
+    display: flex; 
+    gap: 80px; /* diz o espaçamento entre cada conteudo  */
+} 
+
+.cabecalho__menu__link{
+font-family:var(--font-secundaria);
+font-size: 1.5rem; /*24px;*/
+font-weight: 600;
+color: var(--cor-terciaria);
+text-decoration: none; /* é para remover a decoração automatica e none significa "nada" */
+
+}
+
+.apresentacao {
+    /* margin: 10% 15% ; margin é utilizado para definir o tamanho das margens */
+    padding: 5% 15%; /*padding é responsável por definir uma distância interna entre um elemento e sua borda*/
+    display: flex ; /* para justificar aonde vai ficar o conteudo */ 
+    align-items: center;  /* utilizado par ao alinhamento dos itens */
+    justify-content: space-between; /* para justificar aonde vai ficar o conteudo */ 
+    gap: 82px;
+}
+
+.apresentacao__conteudo{
+    width: 50%; /* widht é usado para definir a largura */
+    display: flex; /* para justificar aonde vai ficar o conteudo */
+    flex-direction: column; /* para direcionar a direção do conteudo */
+    gap: 40 px; /* diz o espaçamento entre cada conteudo  */
+}
+
+.apresentacao__conteudo__titulo {  
+    /* Para dividir o valor do pixel para rem, é so pegar o valor x e dividir por 16 */
+    font-size: 2.25rem ; /*36px; / font size e uma taag utilizada para alterar o tamanho da fonte */
+    font-family: var(--font-primaria); /* font family para mudar a fonte do titulo*/
+    font-weight: 400;
+    margin-bottom:30px; /*margin-bottom define a margin area na parte inferior de um elemento.*/
+}
+
+.titulo-destaque { /* utilizando . para identificar a classe e o titulo-destaque para destacar a parte do texto que deseja*/
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__texto{
+    /* Para dividir o valor do pixel para rem, é so pegar o valor x e dividir por 16 */
+    font-size: 1.5rem; /*24px; / font size e uma taag utilizada para alterar o tamanho da fonte */
+    font-family: var(--font-secundaria); /* font family para mudar a fonte do texto*/
+    margin-bottom:25px; /*margin-bottom define a margin area na parte inferior de um elemento.*/
+}
+
+.apresentacao__links {
+    display: flex ; /* torna um flex container, a partir daí podemos manipular todos os elementos filhos desse flex container com propriedades novas */ 
+    flex-direction: column; /* para direcionar a direção do conteudo */
+    justify-content: space-between; /* para justificar aonde vai ficar o conteudo (centro, lateral etc) */ 
+    align-items: center; /*para alinhar o conteudo de acordo com sua direção*/
+    gap: 32px; /* diz o espaçamento entre cada conteudo */
+}
+
+.apresentacao__links__subtitulo {
+    /* Para dividir o valor do pixel para rem, é so pegar o valor x e dividir por 16 */
+    font-size: 1.5rem; /*24px; font size e uma taag utilizada para alterar o tamanho da fonte */
+    font-family: var(--font-primaria); /* font family para mudar a fonte do texto*/
+    font-weight: 400; /* para mudar o peso da fonte, sua expessura */
+}
+
+.apresentacao__links__navegacao {
+    /* background-color: #22d4fd; taag responsavel pela cor de fundo */
+    display: flex; /* para justificar aonde vai ficar o conteudo */ 
+    justify-content: center; /* para justificar aonde vai ficar o conteudo (centro, lateral etc) */ 
+    gap: 16px;
+    width: 50%; /* widht é usado para definir a largura */
+    text-align: center; /* utilizado par ao alinhamento do texto */
+    font-size: 1.5rem;/*24px; font size e uma taag utilizada para alterar o tamanho da fonte */
+    font-weight: 600; /* para mudar o peso da fonte, sua expessura */
+    padding: 22px 0 ; /* padding é para alterar o tamanho entre a borda e o conteudo, primeiro numero(21.5) e o segundo numero (0) é para alterar a horizontal */
+    text-decoration: none; /* é para remover a decoração automatica e none significa "nada" */
+    color:var(--cor-secundaria);
+    font-family:var(--font-secundaria); /* font family para mudar a fonte do texto*/
+    border-radius: 8px; /*utilizado para o tamanho do raio de arredondamento da borda */
+    border: 2px solid var(--cor-terciaria) ;
+}
+
+.apresentacao__links__link:hover {
+    background-color:var(--cor-hoover);
+}
+
+.apresentacao__imagem {
+    width: 40%; /* widht é usado para definir a largura */
+    border-radius: 16px; /*utilizado para o tamanho do raio de arredondamento da borda */
+}
+
+.rodape{
+    color: var(--cor-primaria);
+    background-color: var(--cor-terciaria);
+    padding: 24px; /*padding é responsável por definir uma distância interna entre um elemento e sua borda*/
+    font-family:var(--font-secundaria) ;
+    font-size: 1.5rem ;/* 24px;*/
+    font-weight: 400; /* para mudar o peso da fonte, sua expessura */
+    text-align: center; /*text align é para definir a posicao do txt*/
+}
+
+.apresentacao__conteudo__texto a{
+    text-decoration: none;
+    color: #22D4FD;
+}
+
+
+/* Media é para definir os estilos dos codigos de acordo com o tamanho da tela /
+para encontrar os valores é so ir no inspecionar da pagina */
+
+@media (max-width: 1200px){ 
+
+    .cabecalho{
+        padding: 10%;
+    }
+    .cabecalho__menu{
+        justify-content: center;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5% ;
+    }
+    .apresentacao__conteudo{
+        width: auto; /* auto é para colocar o seu tamanho automatico de acordo com a tela*/
+    }
+}

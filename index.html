@@ -1,0 +1,41 @@
+<!DOCTYPE html> <!-- É a declaração define que este documento é um documento HTML5 -->
+<html lang="pt-br"> <!-- É a taag que define a linguagem do site-->
+<head>  <!-- A taag <head> é a que contém metainformações sobre a página HTML --> 
+    <meta charset="UTF-8"> <!-- É a taag responsavel pela codificação de caracteres, utf-8 é a padrão -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- É a taag responsavel por definir a escala de acordo com cada dispositivo que abre o site -->
+    <title>Portfolio</title> <!-- A taag <title> é responsável pelo nome da aba do site-->
+    <link rel ="stylesheet" href="./style/style.css"> <!-- link faz a conexao com o css, rel indica a relação com o documento e href é a referencia -->
+</head>
+<body>
+    <header class="cabecalho"> <!-- Taag responsavel pelo cabeçalho da pagina-->
+        <nav class="cabecalho__menu"> <!-- responsavel por inserior os links para navegar na pagina -->
+            <a class="cabecalho__menu__link" href="index.html">Home</a> 
+            <!-- taag A (ancora) é responsavel por criar um "botao de redirecionamento
+                juntamente com a taag href que coloca a url "!-->
+            <a class="cabecalho__menu__link" href="about.html">Sobre mim</a> 
+            <!--taag class é para conseguir fazer a estilização-->
+            <a class="cabecalho__menu__link" href="curriculo.html">Currículo</a>
+        </nav>
+    </header> 
+    <main class="apresentacao"> <!-- Taag responsavel pelo conteudo principal da pagina-->
+        <section class="apresentacao__conteudo"> <!-- section responsavel por separar os blocos de conteudo e class pra dar uma classe para conseguir alterar no css-->
+            <h1 class="apresentacao__conteudo__titulo"> Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade! </strong> </h1> <!-- A taag h1 responsavel pelo titulo e a strong para destacar -->
+            <p class="apresentacao__conteudo__texto"> Olá! Sou Mattheus Machado, desenvolvedor Front-end com especialidade em <strong>React, HTML e CSS </strong>.
+                Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
+            <div class="apresentacao__links">  <!-- tag usada para dividir, e nesse caso dividir os links para virarem botoes -->
+                <h2 class="apresentacao__links__subtitulo"> Acesse minhas redes: </h2> <!--h2 é a taag para um sub-título-->
+                <a class="apresentacao__links__navegacao" href="https://GitHub.com/Dutraaaa"> 
+                    <img src="./assets/Logo Github.png"> GitHub </a> <!-- taag A (ancora) é responsavel por criar um "botao de redirecionamento" juntamente com a taag href que coloca a url)-->
+                <a class="apresentacao__links__navegacao" href="https:www.linkedin.com/in/mattheus-machado-dutra-728a98265/"> 
+                    <img src="./assets/Logo linkedin.png"> LinkedIn </a>
+                <a class="apresentacao__links__navegacao" href="https://Instagram.com/dutrazzs_"> 
+                    <img src="./assets/Logo Instagram.png"> Instagram </a>
+            </div>
+        </section>
+        <img class="apresentacao__imagem" src ="./assets/imagem.pnj.jpg" alt="Foto de Mattheus Machado"> <!-- taag img junto com src é responsavel por colocar a imagem -->
+    </main>
+    <footer class="rodape"> <!-- Taag responsavel pelo rodape da pagina-->
+        <p> Desenvolvido em parceria com a Alura </p>
+    </footer> 
+</body>
+</html>
